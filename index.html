@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Calculadora de aguinaldo 2025 para Argentina. Calculá tu aguinaldo bruto y neto estimado de forma rápida y gratuita." />
+  <title>Calculadora de Aguinaldo 2025 🇦🇷</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Aguinaldo 2025 🇦🇷</h1>
+    <p class="subtitle">Calculá tu aguinaldo bruto y neto estimado según la ley argentina.</p>
+
+    <form id="aguinaldoForm">
+      <label for="sueldo">Sueldo bruto mensual ($)</label>
+      <input type="number" id="sueldo" placeholder="Ej: 500000" min="0" step="1000" required />
+
+      <label for="mes">Mes de cobro</label>
+      <select id="mes">
+        <option value="junio">Junio</option>
+        <option value="diciembre">Diciembre</option>
+      </select>
+
+      <label class="checkbox-label">
+        <input type="checkbox" id="trabajoCompleto" checked />
+        Trabajé todo el semestre (6 meses)
+      </label>
+
+      <button type="submit">Calcular Aguinaldo</button>
+    </form>
+
+    <div id="resultado" class="resultado" style="display: none;">
+      <h2>Resultado</h2>
+      <p><strong>Bruto:</strong> <span id="bruto"></span></p>
+      <p><strong>Neto estimado:</strong> <span id="neto"></span> *</p>
+      <p class="nota">* Estimación con ~25% de descuentos (aproximado)</p>
+    </div>
+
+    <p class="footer">
+      Herramienta informativa. Basada en la Ley de Contrato de Trabajo (Ley 20744).
+      No reemplaza el cálculo oficial de tu empleador.
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
